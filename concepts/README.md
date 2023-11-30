@@ -22,11 +22,11 @@ The other primary reason to use a `.env` file is that it protects our secrets (t
 
 So, we definitely don't want bad actors to be able to access our secrets.
 
-So, in summary - why use environment variables?
+<!-- So, in summary - why use environment variables?
 
 1. Security - the separation of these variables from our codebase allows us to 'hide' them from bad actors.
 
-2. 
+2.  -->
 
 
 
