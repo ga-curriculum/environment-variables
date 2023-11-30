@@ -8,11 +8,11 @@ Open your Terminal application and navigate to your `~/code/ga/lectures` directo
 cd ~/code/ga/lectures
 ```
 
-Make a new directory called `ejs`, then enter this directory:
+Make a new directory called `environment-variables`, then enter this directory:
 
 ```bash
-mkdir ejs
-cd ejs
+mkdir environment-variables
+cd environment-variables
 ```
 
 Then, create a `server.js` file. This file will hold your work for this lecture:
@@ -33,15 +33,11 @@ In the terminal, create a `package.json` with all of the default settings by run
 npm init -y
 ```
 
-
-Now that we have a `package.json` file we can add a package from `npm` to our project. We're going to add `Express` to our project next: 
+Next, we're going to add `Express` to our project: 
 
 ```bash
 npm i express
 ```
-
-> 🧠 The i in npm i is an alias for install
-
 
 In `server.js`, add the following starter code: 
 
