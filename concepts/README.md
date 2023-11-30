@@ -21,6 +21,7 @@ When you have values that change based on an environment, they should go in `.en
 The other primary reason to use a `.env` file is that it protects our secrets (things like API keys, passwords, etc.). In the above example, we mentioned that connecting to a database requires a password. If we were to push this password to GitHub as part of our codebase, anyone could read our password and use our database for themselves! The same goes for things like API keys. While this is not as much of a concern when using free services, as soon as we are paying out of pocket for server space or API calls, the consequences for accidentally uploading a secret become much more severe. 
 
 So, we definitely don't want bad actors to be able to access our secrets.
+Fortunately, we can tell GitHub to ignore our `.env` file when pushing our code, keeping our environment variables safe and local.
 
 <!-- So, in summary - why use environment variables?
 
