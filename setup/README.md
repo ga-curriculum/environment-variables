@@ -2,31 +2,32 @@
 
 ## Setup
 
+Create a new repository on GitHub named 'environment-variables'. 
+
 Open your Terminal application and navigate to your `~/code/ga/lectures` directory:
 
 ```bash
 cd ~/code/ga/lectures
 ```
 
-Make a new directory called `environment-variables`, then enter this directory:
+Using the URL from GitHub, clone the repository:
 
 ```bash
-mkdir environment-variables
+git clone https://github.com/<github-username>/environment-variables.git
+```
+Do not copy the above command. It will not work. Your username will replace <github-username> in the URL above.
+
+Navigate into the new directory and open it in VS Code: 
+
+```bash
 cd environment-variables
+code .
 ```
 
--- tktk connect git -- 
-
-Then, create a `server.js` file. This file will hold your work for this lecture:
+Next, create a `server.js` file. This file will hold your work for this lecture:
 
 ```bash
 touch server.js
-```
-
-With the file created, open the contents of the directory in VS Code:
-
-```bash
-code .
 ```
 
 In the terminal, create a `package.json` with all of the default settings by running the following command:
@@ -56,7 +57,7 @@ app.listen(3000, () => {
 })
 ```
 
-- Use `nodemon` to execute the `server.js` file by using this command in your terminal:
+Finally, use `nodemon` to execute the `server.js` file by using this command in your terminal:
 
 ```bash
 nodemon
