@@ -1,6 +1,6 @@
 # ![Environment Variables - Concepts](./assets/hero.png)
 
-**Learning objective:** By the end of this lesson, students will be able to tktk
+**Learning objective:** By the end of this lesson, students will be able to explain the importance of environment variables. 
 
 ## What is an environment?
 
@@ -8,17 +8,19 @@ At the end of the day, even complex code boils down to a static series of logica
 
 Of course, nothing is ever that simple - when code is run, there are external factors to take into account. In Node, we'll frequently make use of external databases, servers, and authentication services in the projects we build. All of these things make up the context in which our apps run - that is to say, the **Environment** they exist in. 
 
-The environment an application runs in can be variable! Let's imagine we have an Express app that requires a database to store information. 
+The environment an application runs in is likely to vary between deployments. Let's imagine we have an Express app that requires a database to store information. 
 
-When we are testing the app, we'll connect to a database server that is designated for testing. It will likely have a lot of incomplete data, and may need to be completely dropped from time to time. The deployed app, on the other hand, will connect to a different server - one maintained for actual users. 
+When we are testing the app, we'll connect to a database server that is designated for testing. In this developer environment, the database will likely have a lot of incomplete data, and may need to be completely dropped from time to time. The deployed app, on the other hand, will connect to a different server - one maintained for actual users. 
 
-The same application code will have to run in different environments, using different connection strings and passwords. When this is the case, we should store environment variables in a `.env` file and access them from our static codebase. 
+The same application code will have to run in different environments, using different connection strings and passwords. As a result, these variables would make up the app's __config__ (anything likely to change or vary between deployments).
+
+> [config](https://12factor.net/config)
 
 ## Why use environment variables?
 
-The first main reason to use environment variables has to do with keeping a separation of concerns. 
+The first main reason to use environment variables has to do with keeping a separation of concerns. It's widely considered best practice to keep separation between the code itself and its config - again, config will vary substantially across deployments, whereas code itself should not. 
 
-As mentioned above, our codebase itself is relatively static, while the factors that make up its environment are likely to change between deployments. These factors, often referred to as an app's __config__, should be held separate from the code itself, as they will vary substantially across deployments, whereas code itself does not. 
+Storing config in environment variables means that we can easily change variables between deployments without actually touching any of our code itself! 
 
 The other primary reason to use a `.env` file is that it helps protect sensitive information (things like API keys, passwords, authentication credentials, etc.). You should never hardcode secrets like these into your code.
 
