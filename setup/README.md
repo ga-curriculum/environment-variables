@@ -15,6 +15,8 @@ mkdir environment-variables
 cd environment-variables
 ```
 
+-- tktk connect git -- 
+
 Then, create a `server.js` file. This file will hold your work for this lecture:
 
 ```bash

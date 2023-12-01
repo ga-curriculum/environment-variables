@@ -22,9 +22,14 @@ While this is cool on its own, remember that a `.env` file is largely used to ke
 
 ## gitignore, and protecting your secrets
 
-A `.gitignore` file specifies intentionally untracked files to ignore. When we include our `.env` file in a `.gitignore`, we tell Git to ignore this file whenever we add, commit, and push code to GitHub.  
+A `.gitignore` file specifies intentionally untracked files to ignore. When we include our `.env` file in a `.gitignore`, we tell Git to ignore this file whenever we add, commit, and push code to GitHub. 
 
-Now, our static code will always try to access `process.env.SECRETPASSWORD`, but each local machine that pulls our code down will need to supply their own SECRETPASSWORD variable in their own `.env` file. Our local secret is safe! 
+INSTALL.gitignore and use
 
+Now, our secrets are not being uploaded to the internet for everyone to see! 
+
+-tktk add commit and push, check the repo! no .env!-
+
+Our static code will always try to access `process.env.SECRETPASSWORD`, but each local machine that pulls our code down will need to supply their own 'SECRETPASSWORD' variable, in their own `.env` file. Our local secret is safe! 
 
 ## How to install and use
