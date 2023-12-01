@@ -3,7 +3,7 @@
 ## Lesson references
 
 - [dotenv](https://www.npmjs.com/package/dotenv)
-- [tktk descriptive name of link]()
+- [gitignore](https://git-scm.com/docs/gitignore)
 - [tktk descriptive name of link]()
 
 ## Level Up references

@@ -9,3 +9,5 @@
 ## How to install and use
 
 ## .gitignore and protecting your secrets
+
+A `.gitignore` file specifies intentionally untracked files to ignore. 
