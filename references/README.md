@@ -4,8 +4,5 @@
 
 - [dotenv](https://www.npmjs.com/package/dotenv)
 - [gitignore](https://git-scm.com/docs/gitignore)
-- [tktk descriptive name of link]()
+- [config](https://12factor.net/config)
 
-## Level Up references
-
-- [tktk descriptive name of link]()

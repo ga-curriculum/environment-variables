@@ -2,31 +2,21 @@
 
 ## About
 
-tktk Write a short but descriptive summary of the content in this module.
+This module will cover the basics of working with environment variables. 
 
 ## Prerequisites
 
-- tktk
-- tktk
-- tktk
+- Intro to Express
 
 ## Content
 
 | Lesson | Video Time | Video | Skills |
 | ------ |:----------:|:-----:| ------ |
 | [Setup](./tktk-microlesson-01/README.md) | -- | -- | -- |
-| [Concepts](./tktk-microlesson-02/README.md) | -- | -- | tktk skills covered |
-| [Using Environment Variables in Node](./tktk-microlesson-03/README.md) | -- | -- | tktk skills covered |
+| [Concepts](./tktk-microlesson-02/README.md) | -- | -- | The importance of environment variables |
+| [Using Environment Variables in Node](./tktk-microlesson-03/README.md) | -- | -- | Using .env files, protecting secrets using .gitignore |
 | **Total content**                                        | -- | -- |                     |
 
-## Level Up content
-
-| Lesson | Video Time | Video | Skills |
-| ------ |:----------:|:-----:| ------ |
-| [tktk Level Up Microlesson Name](./level-up/tktk-microlesson-01.md) | -- | -- | tktk skills covered |
-| [tktk Level Up Microlesson Name](./level-up/tktk-microlesson-02.md) | -- | -- | tktk skills covered |
-| [tktk Level Up Microlesson Name](./level-up/tktk-microlesson-03.md) | -- | -- | tktk skills covered |
-| **Total Level Up content**                                          | -- | -- |                     |
 
 ## References
 

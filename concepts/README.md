@@ -14,7 +14,6 @@ When we are testing the app, we'll connect to a database server that is designat
 
 The same application code will have to run in different environments, using different connection strings and passwords. As a result, these variables would make up the app's __config__ (anything likely to change or vary between deployments).
 
-> [config](https://12factor.net/config)
 
 ## Why use environment variables?
 
