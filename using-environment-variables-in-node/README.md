@@ -1,6 +1,6 @@
 # ![Environment Variables - Using Environment Variables in Node](./assets/hero.png)
 
-**Learning objective:** By the end of this lesson, students will be able to tktk
+**Learning objective:** By the end of this lesson, students will be able to use and protect .env files. 
 
 ## dotenv
 
@@ -73,13 +73,17 @@ if(process.env.PORT){
 }
 ```
 
-Run `nodemon`, and check out the `console.log()` in your terminal. 
+Run `nodemon`, and check out the `console.log()` in your terminal.
+
+> If everything was done correctly, you'll need to navigate to localhost:5000 now - remember, we changed the port! 
+
+You should see it log out 'The express app is ready on port 5000! Your secret is 1234'. 
 
 You might be thinking "hold on, if most servers are using `.env` files, couldn't a bad actor just `console.log()` `process.env` and steal secrets that way?
 
-Luckily, no - while Node understands environment variables through the use of tools like `dotenv`, the browser itself does not. Try to `console.log()` `process.env` in the browser, and you'll get a reference error - it has no idea what `process` is! As long as your secrets are in an `.env` file on the server side, they're safe. 
+Thankfully, no - while Node understands environment variables through the use of tools like `dotenv`, the browser itself does not. Try to `console.log()` `process.env` in the browser, and you'll get a reference error - it has no idea what `process` is! As long as your secrets are in an `.env` file on the server side, they're safe! 
 
-> You should not use environment variables to hold secrets in client side code - everything in client side code is public! 
+> You should not use environment variables to hold secrets in client side code - everything in client side code is public!
 
 
 ## gitignore, and protecting your secrets
@@ -100,6 +104,6 @@ In `.gitignore`, add the following:
 
 Now, our secrets are not being uploaded to the internet for everyone to see! 
 
-Go ahead and add, commit, and push your code to GitHub. Once you're done, check the repo. You should see your server file, but not the `.env`.
+Go ahead and add, commit, and push your code to GitHub. Once you're done, check the repo. You should see your server file, but not the `.env`. 
 
 Our static code will always try to access `process.env.PORT` and `process.env.SECRET_PASSWORD`, but each local machine that pulls our code down will need to supply their own 'PORT' and 'SECRET_PASSWORD' variables, in their own `.env` file. Our local secrets are safe! 
