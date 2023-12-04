@@ -1,13 +1,8 @@
-# ![[tktk Module Name] - References](./assets/hero.png)
+# ![Environment Variables - References](./assets/hero.png)
 
 ## Lesson references
 
-- [tktk descriptive name of link]()
-- [tktk descriptive name of link]()
-- [tktk descriptive name of link]()
+- [dotenv](https://www.npmjs.com/package/dotenv)
+- [gitignore](https://git-scm.com/docs/gitignore)
+- [config](https://12factor.net/config)
 
-## Level Up references
-
-- [tktk descriptive name of link]()
-- [tktk descriptive name of link]()
-- [tktk descriptive name of link]()
