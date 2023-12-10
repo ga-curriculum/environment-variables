@@ -4,7 +4,7 @@
 
 ## dotenv
 
-[dotenv](https://www.npmjs.com/package/dotenv) is a popular module that allows us to load environment variables from a `.env` file in Node. These variables are stored as a key=value pair, and accessible on the `process.env` object. 
+[dotenv](https://www.npmjs.com/package/dotenv) is a popular module that allows us to load environment variables from a `.env` file in Node. 
 
 Let's install dotenv: 
 
@@ -26,16 +26,16 @@ touch .env
 
 Inside this `.env`, we can add variables. By convention, environment variables are written in all caps, with underscores separating multiple words. This helps to differentiate them from other variables. 
 
-So, our environment variables will follow the following convention: 
+So, our environment variables will follow the following convention (enter the following in your .env file): 
 
-```yaml
+```
 PORT=5000
 SECRET_PASSWORD=1234
 ```
 
-> Note that .env files are not JavaScript files, they're instead written in YAML. As such, every value is treated as a string, and we omit quotes. 
+> Note that .env files are not JavaScript files. They are simply a set of KEY=value pairs where every value is treated as a string. We omit quotes around the values, and there is no `let` or `const` used when defining the keys.
 
-And then within our code, we can access the values:
+`dotenv` creates a `process.env` object variable which contains properties that match the variables in our `.env` file. `PORT=5000` would be available to us in our JavaScript code as `process.env.PORT`.  Let's check out how our `server.js` code might access the values we've defined:
 
 ```javascript
 require('dotenv').config()
@@ -81,11 +81,7 @@ You should see it log out 'The express app is ready on port 5000! Your secret is
 
 You might be thinking "hold on, if most servers are using `.env` files, couldn't a bad actor just `console.log()` `process.env` and steal secrets that way?
 
-Thankfully, no - while Node understands environment variables through the use of tools like `dotenv`, the browser itself does not. Try to `console.log()` `process.env` in the browser, and you'll get a reference error - it has no idea what `process` is! As long as your secrets are in an `.env` file on the server side, they're safe! 
-
-> You should not use environment variables to hold secrets in client side code - everything in client side code is public!
-
-
+Thankfully, no - while Node understands environment variables through the use of tools like `dotenv`, that information is not passed onto the browser itself. Try to `console.log()` `process.env` in the browser, and you'll get a reference error - it has no idea what `process` is! As long as your secrets are in an `.env` file on the server side, they're safe! 
 ## gitignore, and protecting your secrets
 
 At this stage, our secrets are still very visible if we were to push our code up to GitHub, they've just been moved into a different file. This is where `.gitignore` comes into play!
