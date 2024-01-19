@@ -1,29 +1,53 @@
 # ![Environment Variables - Concepts](./assets/hero.png)
 
-**Learning objective:** By the end of this lesson, students will be able to explain the importance of environment variables. 
+**Learning Objective:** By the end of this lesson, students will understand the role and importance of environment variables in full-stack development.
 
-## What is an environment?
+## Understanding application environments
 
-In Node, we'll frequently make use of external databases, servers, and authentication services in the projects we build. All of these things make up the context in which our apps run - that is to say, the **Environment** in which they exist. 
+As a full-stack developer, your projects will often involve working with external databases, servers, and authentication services. These components collectively form the context or the **Environment** in which your applications operate. This environment encompasses all the external elements and services that interact with your app.
 
-The environment an application runs in is likely to vary between deployments. Let's imagine we have an Express app that requires a database to store information. 
+### Multiple environments
 
-When we are testing the app, we'll connect to a database server that is designated for testing. In this developer environment, the database will likely have a lot of incomplete or temporary data created solely to aid developers in the creation of the application. The deployed app, on the other hand, will connect to a different server - one maintained for actual users. You wouldn't want developers messing around with the data reserved for actual users, as they might mess something up in the process of development, thus impacting real users in detrimental ways.
+The environment an application runs in is likely to vary between deployments. Let's imagine we have an `Express` application that requires a database to store information. 
 
-The same application code will have to run in different environments, using different connection strings and passwords for each environment. We store the data that changes between environments in what are called ***environment variables***.  Together, all the environment variables for an application would make up its __config__ (anything likely to change or vary between deployments).
+Best practice would be to have two *environments*:
+
+- **Development Environment:** While testing, the app connects to a test database filled with dummy data for development purposes.
+
+- **Production Environment:** In a live setting, the app connects to a different, live users database. Here, maintaining data integrity is crucial as real user data is involved.
+
+You wouldn't want developers messing around with the data for actual users, as they might mess something up in the process of development- impacting real users in detrimental ways.
+
+### Environment variables
+
+To manage these varying environments, we use ***environment variables***. They store specific data (like database URLs, passwords) that changes between environments. Collectively, these variables form the app's ***config***, short for configuration.
+
 ## Why use environment variables?
 
-The first main reason to use environment variables has to do with keeping a separation of concerns. It's widely considered best practice to keep separation between the code itself and its config - again, config will vary substantially across deployments, whereas code itself should not. 
+### 1. Separation of Concerns
 
-Storing config in environment variables means that we can easily change variables between deployments without actually touching any of our code itself! 
+The first main reason to use environment variables has to do with keeping a separation of concerns. Best practices dictate a clear separation between an *app's code* and its *config*:
+
+- Config varies with environments, source code generally does not
+
+- Using environment variables allows us to change settings within a config file without altering the rest of the codebase.
+
+### 2. Security
 
 The other primary reason to use environment variables is that it helps protect sensitive information (things like API keys, passwords, authentication credentials, etc.). You should never hardcode secrets like these into your code.
 
-In the above example, we mentioned that connecting to a database requires a password. If we were to push this password to GitHub as part of our codebase, anyone could read our password and use our database for themselves! The same goes for things like API keys. While this is not as much of a concern when using free services, as soon as we are paying out of pocket for server space or API calls, the consequences for accidentally uploading a secret become much more costly. 
+Environment variables safeguard sensitive data:
 
-So, we definitely don't want bad actors to be able to access our secrets. To avoid this, we store our environment variables in a file called `.env` and then tell GitHub to ignore that file when pushing our code, thus keeping our environment variables safely stored only on our local computer.
+- API keys, passwords, and credentials are stored securely in a separate file
+- Avoid hardcoding secrets into source code, which risks exposure if pushed to repositories like `GitHub`.
 
+### Example Scenario
 
+In the Express example above, we mentioned that connecting to a database requires a password. If we were to push this password to GitHub as part of our codebase, anyone could read our password and use our database!
 
+The same goes for things like API keys. While this is not as much of a concern when using free services, as soon as we are paying out of pocket for data storage or API calls, the consequences for accidentally uploading a secret become much more costly.
 
+**Solution:**
+
+ To avoid this, we store our environment variables in a file called a `.env` and then tell GitHub to ignore that file when pushing our code.
 
