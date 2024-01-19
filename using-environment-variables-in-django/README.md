@@ -1,90 +1,69 @@
 # ![Environment Variables - Using Environment Variables in Django](./assets/hero.png)
 
-**Learning objective:** By the end of this lesson, students will understand how to use and protect `.env` files in a Django application.
+**Learning objective**: By the end of this lesson, students will be able to use and protect `.env` files in Django projects.
 
-## Introduction to Environment Variables in Django
+## Introduction to django-environ
 
 Environment variables play a crucial role in Django applications, especially for managing sensitive data like API keys, database URLs, and secret keys. They help keep our secrets safe and separate from our source code.
 
-### Using `python-decouple`
+`django-environ` is a package that allows Django to use environment variables, similar to how we used `dotenv` in Express. It's a convenient way to manage settings that differ between development and production, such as secret keys and database URLs.
 
-While Django doesn't have a built-in tool like `dotenv` for Node, we can use a package like [`python-decouple`](https://pypi.org/project/python-decouple/) to manage environment variables.
+### Step 1: Installing django-environ
 
+To install `django-environ` for the first time, follow these steps:
 
-First, install `python-decouple`:
+1. **Install django-environ**: Open your terminal and run:
 
-```bash
-pip install python-decouple
-```
+    ```bash
+    pip3 install django-environ
+    ```
 
-### Setting Up `.env` File
+2. **Check Installed Packages**: To see all installed Python packages, run:
 
-Create a `.env` file in your Django project's root directory:
+    ```bash
+    pip3 freeze
+    ```
 
-```bash
-touch .env
-```
+3. **Update requirements.txt**: Redirect the output of `pip3 freeze` to requirements.txt:
 
-Inside this file, add your environment variables:
+    ```bash
+    pip3 freeze > requirements.txt
+    ```
 
-```plaintext
-DJANGO_SECRET_KEY=mysecretkey
-DJANGO_DEBUG=True
-DATABASE_URL=sqlite:///mydatabase.db
-```
+### Step 2: Setting up the .env file
 
-> Note: Like `.env` in Node, `.env` in Django is a simple file with KEY=value pairs.
+1. **Create `.env` File**: In the same directory as your `settings.py`, create a `.env` file:
 
-### Accessing Environment Variables in Django
+    ```bash
+    touch .env
+    ```
 
-The `settings.py` file is where you configure various settings and options for your Django project, including security settings, database configurations, installed apps, middleware, and more.
+2. **Add Secrets**: Inside `.env`, add your secret variables:
 
-Import `Config` from `decouple` and use it to access environment variables:
+    ```
+    SECRET_KEY=your_secret_key_here
+    ```
 
-```python
-from decouple import Config
+### Step 3: Integrating django-environ in settings.py
 
-config = Config('.env')
+1. **Import and Initialize**: At the top of your `settings.py`, add:
 
-SECRET_KEY = config('DJANGO_SECRET_KEY')
-DEBUG = config('DJANGO_DEBUG', cast=bool)
-DATABASES = {
-    'default': config('DATABASE_URL', cast=db_url)
-}
-```
+    ```python
+    import environ
+    env = environ.Env()
+    environ.Env.read_env()
+    ```
 
-> `cast` is used to convert environment variable strings to Python data types.
+This code imports the `environ` module, initializes an environment instance, and reads your `.env` file.
 
-### Default Values with `decouple`
+2. **Access Secrets**: Whenever you need to access a secret, use:
 
-`python-decouple` allows for default values if an environment variable isn't set:
+    ```python
+    env('SECRET_KEY')
+    ```
 
-```python
-DEBUG = config('DJANGO_DEBUG', default=True, cast=bool)
-```
+Replace `SECRET_KEY` with the corresponding key name from your `.env` file as needed.
 
-### Running the Django Server
+### Step 4: Deployment considerations
 
-Start your Django server as usual:
-
-```bash
-python manage.py runserver
-```
-
-You'll see that it uses the environment variables from your `.env` file.
-
-### Securing Secrets with `.gitignore`
-
-To keep your secrets safe, include `.env` in your `.gitignore` file:
-
-```plaintext
-.env
-```
-
-This step ensures that sensitive data won't be pushed to public repositories.
-
-Go ahead and push your code to GitHub. Your `.env` won't be visible, safeguarding your application's secrets.
-
-### Note for Django Developers
-
-It's crucial to manage environment variables effectively for a secure and efficient Django application. Using `python-decouple` with a `.env` file and `.gitignore` is an effective way to handle sensitive data and configurations across different environments in Django projects.
+When deploying your Django application (e.g., to Heroku), remember to set the same environment variables in your deployment environment. The values might differ from your local setup.
