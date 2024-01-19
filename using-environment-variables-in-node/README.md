@@ -1,6 +1,6 @@
 # ![Environment Variables - Using Environment Variables in Node](./assets/hero.png)
 
-**Learning objective:** By the end of this lesson, students will be able to use and protect `.env` files. 
+**Learning objective:** By the end of this lesson, students will be able to use and protect `.env` files in a Node application.
 
 ## Introduction to dotenv
 
