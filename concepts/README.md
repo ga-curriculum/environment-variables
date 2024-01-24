@@ -51,6 +51,6 @@ The app example above mentioned that connecting to a database requires a passwor
 
 The same goes for items like API keys. While this is not as much of a concern when using free services, as soon as we pay out of pocket for data storage or API calls, the consequences of accidentally uploading a secret become much more costly.
 
-This is such a problem that GitHub generously employs a mechanism for scanning public repositories automatically for this type of security mistake called [secret scanning](https://docs.github.com/en/code-security/secret-scanning/about-secret-scanning). If you accidentally push details like this to a public GitHub repository, you'll likely receive an email and security warning on <github.com>.
+This is such a problem that GitHub generously employs a mechanism for scanning public repositories automatically for this type of security mistake called [secret scanning](https://docs.github.com/en/code-security/secret-scanning/about-secret-scanning). If you accidentally push details like this to a public GitHub repository, you'll likely receive an email and security warning on <https://github.com>.
 
 To prevent this problem, we store our environment variables in a file called a `.env` and then tell Git to ignore that file when pushing our code to GitHub.
