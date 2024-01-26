@@ -1,4 +1,4 @@
-# ![Environment Variables](./assets/tktk-hero.png)
+# ![Environment Variables](./assets/hero.png)
 
 ## About
 
@@ -24,7 +24,6 @@ This module on Environment Variables is designed for both beginner and intermedi
 ## References
 
 📖 [Reference Materials](./references/README.md)
-
 
 ## Internal resources
 

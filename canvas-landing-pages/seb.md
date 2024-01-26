@@ -1,4 +1,4 @@
-# ![Environment Variables](../assets/tktk-hero.png)
+# ![Environment Variables](../assets/hero.png)
 
 ## About
 
