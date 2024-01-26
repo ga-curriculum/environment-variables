@@ -19,7 +19,7 @@ You wouldn't want developers messing around with the data for actual users, as t
 
 Note that many apps may have more or different environments than these two - the scale and functionality of an app and the dev team working on a project will influence these decisions. The example above represents an appropriate baseline for any app.
 
-> 📚 An application's *environment* is all the external factors that impact its operation in a given circumstance. It includes things like the configuration for an application (such as what database it should connect to). It could even include details like what network port the application should run on so that it can run alongside other applications. < tktk I'm not sure I like this last sentence, it could go.
+> 📚 An application's *environment* is all the external factors that impact its operation in a given circumstance. It includes things like the configuration for an application (such as what database it should connect to).
 
 ## Environment variables
 
