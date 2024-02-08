@@ -15,6 +15,8 @@ The best practice would be to have two *environments*:
 - **Development environment**: While developing and testing, the app would connect to a test database filled with dummy data for development purposes. This data can be modified or even deleted freely because it is not user-facing and, therefore, unimportant. This environment is commonly referred to as ***dev***.
 - **Production environment**: When the app is deployed to the internet, where users can interact with it, the app will connect to a different production database. Here, maintaining data integrity is crucial as real user data is involved. This environment is commonly referred to as ***prod***.
 
+tktk Hunter, could we visualize the above? Like the same application hosted in a dev environment connected to a db that being used by devs, and a production environment connected to a different database that has actual users?
+
 You wouldn't want developers messing around with the data for actual users, as they might mess something up in the development process - impacting real users in detrimental ways.
 
 Note that many apps may have more or different environments than these two - the scale and functionality of an app and the dev team working on a project will influence these decisions. The example above represents an appropriate baseline for any app.
