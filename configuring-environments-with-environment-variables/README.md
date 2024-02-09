@@ -1,6 +1,4 @@
-# ![Environment Variables - Configuring Environments with Environment Variables](./assets/hero.png)
-
-tktk Hunter, could you update this hero? Also not wild about this name, if you have a suggestion here I'm all ears. I think I'd ideally name this **Environment Variables** but I refuse to have a microlesson with the same title as a module lol.
+# ![Environment Variables - Configuring Applications with Environment Variables](./assets/hero.png)
 
 **Learning objective**: By the end of this lesson, students will understand the value of using environment variables to configure environments.
 
