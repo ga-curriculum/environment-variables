@@ -12,7 +12,7 @@ The environment an application runs in will likely vary depending on the context
 
 The best practice would be to have two *environments*:
 
-- **Development environment**: While developing and testing, the app would connect to a test database filled with dummy data for development purposes. This data can be modified or even deleted freely because it is not user-facing and, therefore, unimportant. This environment is commonly referred to as ***dev***.
+- **Development environment**: While developing and testing, the app would connect to a test database filled with fake data for development purposes. This data can be modified or even deleted freely because it is not user-facing and, therefore, unimportant. This environment is commonly referred to as ***dev***.
 - **Production environment**: When the app is deployed to the internet, where users can interact with it, the app will connect to a different production database. Here, maintaining data integrity is crucial as real user data is involved. This environment is commonly referred to as ***prod***.
 
 ![Environments](./assets/environments.png)
