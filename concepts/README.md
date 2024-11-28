@@ -1,4 +1,7 @@
-# ![Environment Variables - Concepts](./assets/hero.png)
+<h1>
+  <span class="headline">Environment Variables</span>
+  <span class="subhead">Concepts</span>
+</h1>
 
 **Learning Objective:** By the end of this lesson, students will understand the role and importance of environments in full-stack development.
 

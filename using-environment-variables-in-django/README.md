@@ -1,4 +1,7 @@
-# ![Environment Variables - Using Environment Variables in Django](./assets/hero.png)
+<h1>
+  <span class="headline">Environment Variables</span>
+  <span class="subhead">Using Environment Variables in Django</span>
+</h1>
 
 **Learning objective**: By the end of this lesson, students will be able to use and protect `.env` files in Django projects.
 

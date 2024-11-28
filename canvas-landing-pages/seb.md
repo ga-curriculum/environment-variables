@@ -1,4 +1,7 @@
-# ![Environment Variables](../assets/hero.png)
+<h1>
+  <span class="prefix"></span>
+  <span class="headline">Environment Variables</span>
+</h1>
 
 ## About
 
@@ -6,11 +9,11 @@ This module is designed for beginner and intermediate learners who aim to unders
 
 ## Content
 
-| Lesson | Video Time | Video | Skills |
-| ------ |:----------:|:-----:| ------ |
-| [Concepts](../concepts/README.md)                                                                                       | 2 min | [link](https://generalassembly.wistia.com/medias/ueaxt4k5iq) | Explain the fundamental concepts of the different types of environments.                     |
-| [Configuring Environments with Environment Variables](../configuring-environments-with-environment-variables/README.md) | 3 min | [link](https://generalassembly.wistia.com/medias/8wxfacq9de) | Explain the use of environment variables for security and the configuration of environments. |
-| **Total content**                                                                                                       | 5 min | --                                                           |                                                                                              |
+| Lesson                                                                                                                  | Video Time |                            Video                             | Skills                                                                                       |
+| ----------------------------------------------------------------------------------------------------------------------- | :--------: | :----------------------------------------------------------: | -------------------------------------------------------------------------------------------- |
+| [Concepts](../concepts/README.md)                                                                                       |   2 min    | [link](https://generalassembly.wistia.com/medias/ueaxt4k5iq) | Explain the fundamental concepts of the different types of environments.                     |
+| [Configuring Environments with Environment Variables](../configuring-environments-with-environment-variables/README.md) |   3 min    | [link](https://generalassembly.wistia.com/medias/8wxfacq9de) | Explain the use of environment variables for security and the configuration of environments. |
+| **Total content**                                                                                                       |   5 min    |                              --                              |                                                                                              |
 
 ## References
 

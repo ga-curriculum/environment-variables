@@ -1,4 +1,7 @@
-# ![Environment Variables - Configuring Applications with Environment Variables](./assets/hero.png)
+<h1>
+  <span class="headline">Environment Variables</span>
+  <span class="subhead">Configuring Environments with Environment Variables</span>
+</h1>
 
 **Learning objective**: By the end of this lesson, students will understand the value of using environment variables to configure environments.
 
