@@ -27,8 +27,8 @@ This module is designed for beginner and intermediate learners who aim to unders
 
 ### Course landing pages
 
-- [SEB - Software Engineering Bootcamp](https://pages.git.generalassemb.ly/modular-curriculum-all-courses/environment-variables/canvas-landing-pages/seb.html)
-- [Fallback](https://pages.git.generalassemb.ly/modular-curriculum-all-courses/environment-variables/canvas-landing-pages/fallback.html)
+- [SEB - Software Engineering Bootcamp](https://ga-curriculum.github.io/environment-variables/canvas-landing-pages/seb.html)
+- [Fallback](https://ga-curriculum.github.io/environment-variables/canvas-landing-pages/fallback.html)
 
 ### Resources
 
@@ -40,4 +40,4 @@ This module is designed for beginner and intermediate learners who aim to unders
 
 ---
 
-**Find a 👾 bug 👾 or have suggestions? [Let us know](https://pages.git.generalassemb.ly/modular-curriculum-all-courses/universal-resources-internal/module-feedback.html)!**
+**Find a 👾 bug 👾 or have suggestions? [Let us know](https://ga-curriculum.github.io/universal-resources-internal/module-feedback.html)!**
